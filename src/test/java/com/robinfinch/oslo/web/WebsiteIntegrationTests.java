@@ -80,7 +80,7 @@ public class WebsiteIntegrationTests {
 
         HtmlPage page = webClient.getPage("http://localhost:8080/");
 
-        assertEquals("Welcome\r\n" +
-                " Hello, Mark Hoogenboom!", page.asText());
+        assertEquals("Welcome\n" +
+                " Hello, Mark Hoogenboom!", page.asText().replace("\r\n", "\n"));
     }
 }
